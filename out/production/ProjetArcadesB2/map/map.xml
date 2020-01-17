@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" source="Dungeon_Tileset.tsx"/>
+ <tileset firstgid="321" source="tuile-logic.tsx"/>
+ <layer id="1" name="Calque 1" width="30" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECotmYGCIHgB8CoedIHFkDHIbMp8WbJj/kc2mp70w+2E0sjsoZePyhzYwXLFhSu2D6bfGEW+RQHFsGKaPEhpk5zMgvoGEXwHZIDOx2QkSo8Q+ZL3LgGa9QMKroGZTau9PAm4E2XkCCSO7aaiy4wj4GdlfhMIHXR6dj2zWKJs6+YFQ/IHigBrxgG5GLAnpZqTH9XlgWI3igQmDu8CwR8aj8TAw8TAa7qSF+3w6lhm9QLtgeD2d7F0NtGcNEK8F4nVAPBD2zoXaawqkBwIDANLlCvEQDgAA
+  </data>
+ </layer>
+ <layer id="2" name="Calque 2" width="30" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu1WS0oEQQxtPzsRcWYt4nen0P42oitP41n0CF5A0buMeoGZceG2PYHvYYUJRVJVFvaAYuBNp+oledNJddODpmkG//izPVjGbFcUDoKPi2k69hARspY8Wa8pblX55K+AIXCkcBH8c1wt6NhLI0/4TcVtKJ/8OkDdeZvWfasQ/6jIYYrovsMX3MPvSDo2wv4L8Ozw3vZwYcaI7mwn740RMgUm+VA3okbXLRYI6YeOi+eR0mVbFgOWdJGML/1IhaV0t5C4HbCTKpLgrh0updsih88acRzl6zMSUeZSeid907qdmfEzm3IP8v+1bkohPhdebOl/L9X1dGr3f6tu6fniuZIzxR5591syzxHy+b7kNWd8JvWz6OnGdaz7GiNoCvCasxYBcpYZW6qbq/td3tLlLGrej1q7w4Iz8MzS5Sz4fuR3i56JrmH1XfM539JtkcTvG37v6JmwVsl5Y5xn7APN0v1i6n9HSI17fIO9W4U+dCeoT2h7wOIJeATuAE+3A9eHvYai1N0F9uaMfeidAH3ZKQpbOMP+J2SGjNEQDgAA
+  </data>
+ </layer>
+ <layer id="3" name="logic" width="30" height="30" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu1U0QqAMAhcn7an6rX+/1+aDwdOEMtIWWwwzKWedyvrUkqde2rwo29gb1yi1sZ0GwGX/+sejbx8s3AtjuhLi7P4Ih9WqyPPrfivcGUf0o/EhQZkLVzZ5xs/C5f3zPkejf8atM/B5hXX7O4z7pfiuc6e+YxaZK2FWIobFdfiqL3X+EITWC3fez5xvcr1edb9aDr3VZ57WbhWp5xv1nyGNpH2An5i/T0QDgAA
+  </data>
+ </layer>
+</map>

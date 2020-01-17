@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jinput">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/com/sf/Hierarchie/lib/jinput.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/sf/Hierarchie/lib/lwjgl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/com/sf/Hierarchie/lib/slick.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

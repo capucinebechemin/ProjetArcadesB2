@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="left-up" compressionlevel="0" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="grass.tsx"/>
+ <layer id="1" name="Calque 1" width="30" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2WwQ7DMAhDs9s+oP//rR2HJ1kRKAnbyDr1EDnFBgPKoUdr7dh0Hi/fysOclZ7mlfGdzUFn+OwO3Mq8oxw80H3Kd9TjLl/ry7yr58WXuT2kp9HuVnm8orx/82XXmXnZhWJUhzjanb704qH21/Nwir0m+01NLx9O0dNlYtT0cuEUPV0mRk0vF07R01lMNXof6SN+Nq5eeo/y0UT8t+K3b81/1q/vmf7Ad9/bbB104O279h5n94YOvPqemaMST1sb0kQQDgAA
+  </data>
+ </layer>
+</map>
