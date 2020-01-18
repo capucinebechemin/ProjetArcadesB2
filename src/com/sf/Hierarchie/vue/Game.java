@@ -2,13 +2,16 @@ package com.sf.Hierarchie.vue;
 
 import com.sf.Hierarchie.vue.Hud;
 import org.newdawn.slick.*;
+import org.newdawn.slick.state.BasicGameState;
+import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
 
 import javax.swing.*;
 
 
-public class Game extends BasicGame {
+public class Game extends BasicGameState {
 
+    public static final int ID = 2;
     private float x2 = 880, y2 = 860;
     private int direction2 = 2;
     private boolean moving2 = false;
@@ -24,19 +27,9 @@ public class Game extends BasicGame {
     private Hud hud = new Hud();
     private Hud hud2 = new Hud();
 
-    public Game(String title) {
-        super(title);
-    }
 
-    private menu menu;
-    private enum STATE{
-        MENU,
-        GAME
-    }
-
-    private STATE state = STATE.MENU;
-
-    public void update(GameContainer container, int delta) throws SlickException {
+    @Override
+    public void update(GameContainer container, StateBasedGame game, int delta) throws SlickException  {
 
         if (this.moving) {
             float futurX = getFuturX(delta);
@@ -123,8 +116,7 @@ public class Game extends BasicGame {
     }
 
     @Override
-    public void render(GameContainer gameContainer, org.newdawn.slick.Graphics graphics) throws SlickException {
-        if(state == STATE.GAME){
+    public void render(GameContainer container, StateBasedGame game, Graphics graphics) throws SlickException {
             this.map.render(0, 0, 0);
             this.map.render(0, 0, 1);
 
@@ -136,13 +128,10 @@ public class Game extends BasicGame {
 
             this.hud.render(graphics,1,0.4f);
             this.hud2.render(graphics,2, 0.7f);
-        }else if(state == STATE.MENU){
-
-        }
     }
 
-    public void init(GameContainer gc) throws SlickException {
-        menu = new menu();
+    @Override
+    public void init(GameContainer container, StateBasedGame game) throws SlickException {
         map = new TiledMap("map/map.xml");
 
         SpriteSheet spriteSheet = new SpriteSheet("sprites/fbi.png", 64, 64);
@@ -186,7 +175,6 @@ public class Game extends BasicGame {
     @Override
     public void keyPressed(int key, char c) {
         System.out.println(key);
-        if(state == STATE.GAME){
             switch (key) {
                 case Input.KEY_UP:    this.direction = 0; this.moving = true;
                     break;
@@ -205,13 +193,10 @@ public class Game extends BasicGame {
                 case Input.KEY_D: this.direction2 = 3; this.moving2 = true;
                     break;
             }
-        }
-
     }
 
     @Override
     public void keyReleased(int key, char c) {
-        if(state == STATE.GAME){
             switch (key) {
                 case Input.KEY_UP:    this.direction = 0; this.moving = false;
                     break;
@@ -230,7 +215,10 @@ public class Game extends BasicGame {
                 case Input.KEY_D: this.direction2 = 3; this.moving2 = false;
                     break;
             }
-        }
+    }
 
+    @Override
+    public int getID() {
+        return ID;
     }
 }

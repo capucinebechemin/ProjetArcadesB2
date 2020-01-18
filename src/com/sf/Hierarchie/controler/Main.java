@@ -1,28 +1,29 @@
 package com.sf.Hierarchie.controler;
-
-import com.sf.Hierarchie.vue.FOptions;
-import com.sf.Hierarchie.vue.Fenetre;
-import com.sf.Hierarchie.vue.menu;
+import com.sf.Hierarchie.vue.Game;
+import com.sf.Hierarchie.vue.MainScreenGameState;
 import org.newdawn.slick.AppGameContainer;
+import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.state.StateBasedGame;
 
-public class Main {
+public class Main extends StateBasedGame {
 
-    static private AppGameContainer app;
-    private static FOptions f1;
-    private static Fenetre f2;
-    private static menu f3;
+    public Main() {
+        super("Lesson 15 :: StateGame");
+    }
 
     public static void main(String[] args) throws SlickException {
+        new AppGameContainer(new Main(), 960, 960, false).start();
+    }
 
-        f3 = new menu();
+    /**
+     * Ici il suffit d'ajouter nos deux boucles de jeux.
+     * La première ajoutèe sera celle qui sera utilisée au début
+     */
 
-        /*app = new AppGameContainer( new Game("map") );
-        app.setDisplayMode( 960, 960, false );
-        app.start();
-
-        f1 = new FOptions();
-        ArrayList<Personnage> liste = LienBDD.selectAll();
-        System.out.println(liste);*/
+    @Override
+    public void initStatesList(GameContainer container) throws SlickException {
+        addState(new MainScreenGameState());
+        addState(new Game());
     }
 }

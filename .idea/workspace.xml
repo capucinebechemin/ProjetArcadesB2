@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a9092c-7e72-4551-9471-9b92d3ddc225" name="Default Changelist" comment="" />
+    <list default="true" id="b9a9092c-7e72-4551-9471-9b92d3ddc225" name="Default Changelist" comment="menu test2">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sprites/forest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/controler/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/controler/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Map.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/menu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/menu.java" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +26,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            <state relative-caret-position="306">
+              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,24 +53,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+            <state relative-caret-position="391">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#7856#7857#0" expanded="true" />
+                <element signature="e#7881#7882#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,6 +75,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -70,29 +89,51 @@
         <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/model/LienBDD.java" />
         <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/model/Personnage.java" />
         <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/FOptions.java" />
-        <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MapGameState.java" />
+        <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/StateBasedGame.java" />
         <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/menu.java" />
+        <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java" />
         <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/StateGame.java" />
+        <option value="$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="976" />
-    <option name="height" value="1066" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ProjetArcadesB2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetArcadesB2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetArcadesB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetArcadesB2" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetArcadesB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetArcadesB2" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="map" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetArcadesB2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetArcadesB2" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="sprites" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetArcadesB2" type="b2602c69:ProjectViewProjectNode" />
@@ -137,11 +178,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -150,6 +190,9 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\YNOV\B2\ProjetArcadesB2\res\sprites" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\YNOV\B2\ProjetArcadesB2" />
       <recent name="D:\YNOV\B2\ProjetArcadesB2\res" />
@@ -198,17 +241,19 @@
       <updated>1579204066078</updated>
       <workItem from="1579204069290" duration="2083000" />
       <workItem from="1579251838216" duration="3275000" />
+      <workItem from="1579256273110" duration="2897000" />
+      <workItem from="1579344526244" duration="3251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5358000" />
+    <option name="totallyTimeSpent" value="11506000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="976" height="1066" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34934497" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17590618" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -217,8 +262,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33118972" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19399786" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -227,7 +272,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3279743" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -242,14 +287,12 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="menu test2" />
+    <option name="LAST_COMMIT_MESSAGE" value="menu test2" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../ProjetArcades/Projet_Dev_Logiciel/ProjetArcades/src/com/sf/Hierarchie/Vue/Map/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="24" lean-forward="true" selection-end-line="215" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../ProjetArcades/Projet_Dev_Logiciel/ProjetArcades/src/com/sf/Hierarchie/Vue/Map/Map.java" />
     <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Shoot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -311,16 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Fenetre.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -328,22 +361,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/src/com/sf/Hierarchie/lib/slick.jar!/org/newdawn/slick/Game.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/menu.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MapGameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="238">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+        <state relative-caret-position="391">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#7856#7857#0" expanded="true" />
+            <element signature="e#7881#7882#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/StateGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
           </folding>
         </state>
       </provider>
