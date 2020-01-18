@@ -2,15 +2,16 @@ package com.sf.Hierarchie.vue;
 
 import com.sf.Hierarchie.vue.Hud;
 import org.newdawn.slick.*;
+import org.newdawn.slick.geom.Vector2f;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
-
 import javax.swing.*;
 
 
 public class Game extends BasicGameState {
 
+    private Shoot shoot;
     public static final int ID = 2;
     private float x2 = 880, y2 = 860;
     private int direction2 = 2;
@@ -30,6 +31,8 @@ public class Game extends BasicGameState {
 
     @Override
     public void update(GameContainer container, StateBasedGame game, int delta) throws SlickException  {
+
+        shoot.update(delta);
 
         if (this.moving) {
             float futurX = getFuturX(delta);
@@ -74,9 +77,9 @@ public class Game extends BasicGameState {
     private float getFuturX(int delta) {
         float futurX = this.x;
         switch (this.direction) {
-            case 1: futurX = this.x - .1f * delta;
+            case 1: futurX = this.x - .2f * delta;
                 break;
-            case 3: futurX = this.x + .1f * delta;
+            case 3: futurX = this.x + .2f * delta;
                 break;
         }
         return futurX;
@@ -85,9 +88,9 @@ public class Game extends BasicGameState {
     private float getFuturY(int delta) {
         float futurY = this.y;
         switch (this.direction) {
-            case 0: futurY = this.y - .1f * delta;
+            case 0: futurY = this.y - .2f * delta;
                 break;
-            case 2: futurY = this.y + .1f * delta;
+            case 2: futurY = this.y + .2f * delta;
                 break;
         }
         return futurY;
@@ -96,9 +99,9 @@ public class Game extends BasicGameState {
     private float getFuturX2(int delta) {
         float futurX2 = this.x2;
         switch (this.direction2) {
-            case 1: futurX2 = this.x2 - .1f * delta;
+            case 1: futurX2 = this.x2 - .2f * delta;
                 break;
-            case 3: futurX2 = this.x2 + .1f * delta;
+            case 3: futurX2 = this.x2 + .2f * delta;
                 break;
         }
         return futurX2;
@@ -107,12 +110,15 @@ public class Game extends BasicGameState {
     private float getFuturY2(int delta) {
         float futurY2 = this.y2;
         switch (this.direction2) {
-            case 0: futurY2 = this.y2 - .1f * delta;
+            case 0: futurY2 = this.y2 - .2f * delta;
                 break;
-            case 2: futurY2 = this.y2 + .1f * delta;
+            case 2: futurY2 = this.y2 + .2f * delta;
                 break;
         }
         return futurY2;
+    }
+
+    public void Shooting(float x, float y, Vector2f vitesse){
     }
 
     @Override
@@ -128,11 +134,16 @@ public class Game extends BasicGameState {
 
             this.hud.render(graphics,1,0.4f);
             this.hud2.render(graphics,2, 0.7f);
+
+            shoot.render(container, graphics);
+
     }
 
     @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
         map = new TiledMap("map/map.xml");
+        shoot = new Shoot( new Vector2f(x,y), new Vector2f(500,100));
+
 
         SpriteSheet spriteSheet = new SpriteSheet("sprites/fbi.png", 64, 64);
 

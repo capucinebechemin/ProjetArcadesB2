@@ -7,6 +7,7 @@ import org.newdawn.slick.state.StateBasedGame;
 public class MainScreenGameState extends BasicGameState {
 
     public static final int ID = 1;
+    int idMenu = 2;
     private Image background;
     private StateBasedGame game;
 
@@ -23,7 +24,8 @@ public class MainScreenGameState extends BasicGameState {
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
         background.draw(0, 0, container.getWidth(), container.getHeight());
-        g.drawString("Appuyer sur une touche", 300, 300);
+        g.drawString("BIENVENUE DANS LE DONJON", 380, 300);
+
     }
 
     /**
@@ -36,7 +38,17 @@ public class MainScreenGameState extends BasicGameState {
 
     @Override
     public void keyReleased(int key, char c) {
-        game.enterState(Game.ID);
+
+        switch (key) {
+            case Input.KEY_UP: idMenu += 1;
+                break;
+            case Input.KEY_DOWN:  idMenu -= 1;
+                break;
+            case Input.KEY_ENTER: game.enterState(Game.ID);
+                break;
+        }
+
+        System.out.println(idMenu);
     }
 
     /**
