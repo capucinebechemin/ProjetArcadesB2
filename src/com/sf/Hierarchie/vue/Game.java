@@ -11,7 +11,9 @@ import javax.swing.*;
 
 public class Game extends BasicGameState {
 
-    private Shoot shoot;
+    public Shoot shoot;
+    public Vector2f vecteur;
+    public Vector2f vecteur2;
     public static final int ID = 2;
     private float x2 = 880, y2 = 860;
     private int direction2 = 2;
@@ -31,8 +33,6 @@ public class Game extends BasicGameState {
 
     @Override
     public void update(GameContainer container, StateBasedGame game, int delta) throws SlickException  {
-
-        shoot.update(delta);
 
         if (this.moving) {
             float futurX = getFuturX(delta);
@@ -118,8 +118,6 @@ public class Game extends BasicGameState {
         return futurY2;
     }
 
-    public void Shooting(float x, float y, Vector2f vitesse){
-    }
 
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics graphics) throws SlickException {
@@ -134,16 +132,11 @@ public class Game extends BasicGameState {
 
             this.hud.render(graphics,1,0.4f);
             this.hud2.render(graphics,2, 0.7f);
-
-            shoot.render(container, graphics);
-
     }
 
     @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
         map = new TiledMap("map/map.xml");
-        shoot = new Shoot( new Vector2f(x,y), new Vector2f(500,100));
-
 
         SpriteSheet spriteSheet = new SpriteSheet("sprites/fbi.png", 64, 64);
 
@@ -202,6 +195,14 @@ public class Game extends BasicGameState {
                 case Input.KEY_S:  this.direction2 = 2; this.moving2 = true;
                     break;
                 case Input.KEY_D: this.direction2 = 3; this.moving2 = true;
+                    break;
+                case Input.KEY_1:
+                    System.out.println("lancer");
+                    try {
+                        shoot = new Shoot(vecteur = new Vector2f(x,y), vecteur2 = new Vector2f(1,1) );
+                    } catch (SlickException e) {
+                        e.printStackTrace();
+                    }
                     break;
             }
     }

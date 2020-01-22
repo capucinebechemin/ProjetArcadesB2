@@ -25,7 +25,6 @@ public class MainScreenGameState extends BasicGameState {
     public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
         background.draw(0, 0, container.getWidth(), container.getHeight());
         g.drawString("BIENVENUE DANS LE DONJON", 380, 300);
-
     }
 
     /**
@@ -47,6 +46,7 @@ public class MainScreenGameState extends BasicGameState {
             case Input.KEY_ENTER: game.enterState(Game.ID);
                 break;
         }
+
 
         System.out.println(idMenu);
     }
