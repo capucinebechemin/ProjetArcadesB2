@@ -11,9 +11,11 @@ import javax.swing.*;
 
 public class Game extends BasicGameState {
 
+    public static GameContainer gamecontainer;
     public Shoot shoot;
     public Vector2f vecteur;
     public Vector2f vecteur2;
+
     public static final int ID = 2;
     private float x2 = 880, y2 = 860;
     private int direction2 = 2;
@@ -198,11 +200,6 @@ public class Game extends BasicGameState {
                     break;
                 case Input.KEY_1:
                     System.out.println("lancer");
-                    try {
-                        shoot = new Shoot(vecteur = new Vector2f(x,y), vecteur2 = new Vector2f(1,1) );
-                    } catch (SlickException e) {
-                        e.printStackTrace();
-                    }
                     break;
             }
     }

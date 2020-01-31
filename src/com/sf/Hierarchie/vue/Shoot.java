@@ -9,24 +9,18 @@ import org.newdawn.slick.geom.Vector2f;
 
 public class Shoot {
 
-    public int deplacement;
-    public Graphics graphics;
-    public GameContainer gc;
     private Vector2f pos;
     private Vector2f vitesse;
     private int visible;
     private boolean active = true;
     private static int MAX_VISIBLE = 200;
 
-    public Shoot(Vector2f pos, Vector2f vitesse) throws SlickException {
-
+    public Shoot(Vector2f pos, Vector2f vitesse){
         this.pos = pos;
         this.vitesse = vitesse;
-        update();
-        render();
     }
 
-    public void update(){
+    public void update(int deplacement){
         if(active){
             Vector2f vitesseReal = vitesse.copy();
             vitesseReal.scale((deplacement/1000.0f));
@@ -39,7 +33,7 @@ public class Shoot {
         }
     }
 
-    public void render() throws SlickException{
+    public void render(GameContainer gameContainer, Graphics graphics) throws SlickException{
         graphics.setColor(Color.white);
         graphics.fillOval(pos.getX()-10,pos.getY()-10,20,20);
     }
@@ -47,5 +41,4 @@ public class Shoot {
     public boolean isActive(){
         return active;
     }
-
 }
