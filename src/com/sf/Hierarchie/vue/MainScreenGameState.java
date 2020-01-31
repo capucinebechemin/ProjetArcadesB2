@@ -16,7 +16,7 @@ public class MainScreenGameState extends BasicGameState {
     @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
         this.game = game;
-        this.background = new Image("sprites/forest.jpg");
+        this.background = new Image("sprites/background.png");
     }
 
     /**
@@ -28,8 +28,8 @@ public class MainScreenGameState extends BasicGameState {
         background.draw(0, 0, container.getWidth(), container.getHeight());
         g.drawString("BIENVENUE DANS LE DONJON", 380, 100);
         g.drawString("APPUYER SUR ENTRER POUR COMMENCER", 330, 200);
-        g.drawString("APPUYER SUR ESPACE POUR VOIR LES OPTIONS", 310, 300);
-        g.drawString("APPUYER SUR A POUR VOIR LES INSTRUCTIONS", 310, 400);
+        g.drawString("APPUYER SUR O POUR VOIR LES OPTIONS", 310, 300);
+        g.drawString("APPUYER SUR I POUR VOIR LES INSTRUCTIONS", 310, 400);
 
     }
 

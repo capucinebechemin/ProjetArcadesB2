@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a9092c-7e72-4551-9471-9b92d3ddc225" name="Default Changelist" comment="menu test2">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_43_bin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetArcadesB2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetArcadesB2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/controler/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/controler/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/model/LienBDD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/model/LienBDD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/model/Personnage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/model/Personnage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/FOptions$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/FOptions$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/FOptions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/FOptions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Fenetre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Fenetre.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Hud.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Hud.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/MainScreenGameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/MainScreenGameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Shoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Shoot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/model/Personnage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/model/Personnage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/FOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/FOptions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Fenetre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Fenetre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java" afterDir="false" />
@@ -111,7 +103,7 @@
       <workItem from="1579715639304" duration="535000" />
       <workItem from="1580378787171" duration="3009000" />
       <workItem from="1580471594480" duration="2525000" />
-      <workItem from="1580475936379" duration="3482000" />
+      <workItem from="1580475936379" duration="10571000" />
     </task>
     <servers />
   </component>

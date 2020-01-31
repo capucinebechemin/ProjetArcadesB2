@@ -3,6 +3,7 @@ import com.sf.Hierarchie.model.LienBDD;
 import com.sf.Hierarchie.model.Personnage;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -18,11 +19,14 @@ public class FOptions extends JFrame {
         DefaultListModel liste_personnages = new DefaultListModel();
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         // positionement + taille
-        setBounds(50, 50, 500, 500);
+        setBounds(50, 50, 960, 960);
         setTitle("Ecran d'options");
 
         // creation du panel
         JPanel monPanel = new JPanel();
+        monPanel.setForeground(new Color(255, 255, 255));
+        monPanel.setFont(new Font("Tahoma", Font.BOLD, 15));
+        monPanel.setBackground(new Color(32, 85, 109));
         setContentPane(monPanel);
         // definition du layout
         setLayout(null);
@@ -104,12 +108,25 @@ public class FOptions extends JFrame {
 
 
         JButton valider = new JButton("Modifier");
-        valider.setBounds(200, 350, 100, 60);
+        valider.setForeground(new Color(255, 255, 255));
+        valider.setFont(new Font("Tahoma", Font.BOLD, 15));
+        valider.setBackground(new Color(9, 31, 49));
+        valider.setBounds(150, 350, 100, 60);
         monPanel.add(valider);
 
         JButton retour = new JButton("Retour");
-        retour.setBounds(50, 350, 100, 60);
+        retour.setForeground(new Color(255, 255, 255));
+        retour.setFont(new Font("Tahoma", Font.BOLD, 15));
+        retour.setBackground(new Color(9, 31, 49));
+        retour.setBounds(25, 350, 100, 60);
         monPanel.add(retour);
+
+        JButton instruction = new JButton("Instructions");
+        instruction.setForeground(new Color(255, 255, 255));
+        instruction.setFont(new Font("Tahoma", Font.BOLD, 15));
+        instruction.setBackground(new Color(9, 31, 49));
+        instruction.setBounds(275, 350, 200, 60);
+        monPanel.add(instruction);
 
         setVisible(true);
 
@@ -147,11 +164,18 @@ public class FOptions extends JFrame {
             }
         });
 
+        instruction.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Fenetre fenetre = new Fenetre();
+                dispose();
+            }
+        });
 
         retour.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                dispose();
             }
         });
 
