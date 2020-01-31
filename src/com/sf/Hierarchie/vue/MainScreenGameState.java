@@ -10,6 +10,8 @@ public class MainScreenGameState extends BasicGameState {
     int idMenu = 2;
     private Image background;
     private StateBasedGame game;
+    private FOptions fenetre;
+    private Fenetre instruction;
 
     @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
@@ -24,7 +26,11 @@ public class MainScreenGameState extends BasicGameState {
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
         background.draw(0, 0, container.getWidth(), container.getHeight());
-        g.drawString("BIENVENUE DANS LE DONJON", 380, 300);
+        g.drawString("BIENVENUE DANS LE DONJON", 380, 100);
+        g.drawString("APPUYER SUR ENTRER POUR COMMENCER", 330, 200);
+        g.drawString("APPUYER SUR ESPACE POUR VOIR LES OPTIONS", 310, 300);
+        g.drawString("APPUYER SUR A POUR VOIR LES INSTRUCTIONS", 310, 400);
+
     }
 
     /**
@@ -39,12 +45,13 @@ public class MainScreenGameState extends BasicGameState {
     public void keyReleased(int key, char c) {
 
         switch (key) {
-            case Input.KEY_UP: idMenu += 1;
-                break;
-            case Input.KEY_DOWN:  idMenu -= 1;
-                break;
             case Input.KEY_ENTER: game.enterState(Game.ID);
                 break;
+            case Input.KEY_I: Fenetre instruction = new Fenetre();
+                break;
+            case Input.KEY_O: FOptions options = new FOptions();
+                break;
+
         }
 
 

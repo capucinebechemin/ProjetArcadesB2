@@ -8,6 +8,9 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class FOptions extends JFrame {
+
+
+    public static final int ID = 2;
     public FOptions() {
         initFenetre();
     }
@@ -145,5 +148,17 @@ public class FOptions extends JFrame {
         });
 
 
+        retour.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+
+    }
+
+    public static int getID() {
+        return ID;
     }
 }
