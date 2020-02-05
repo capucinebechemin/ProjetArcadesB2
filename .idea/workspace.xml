@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a9092c-7e72-4551-9471-9b92d3ddc225" name="Default Changelist" comment="menu test2">
-      <change afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Bullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/EndGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/EndGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/EndGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/MainScreenGameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/MainScreenGameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Shoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/com/sf/Hierarchie/vue/Shoot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/map/map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ProjetArcadesB2/map/map.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ProjetArcadesB2/sprites/bullet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/map/map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/map/map.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/sprites/bullet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/EndGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/EndGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Shoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Shoot.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="306">
+              <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/EndGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#326#327#0" expanded="true" />
@@ -66,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="195" column="5" lean-forward="true" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
+            <state relative-caret-position="357">
+              <caret line="193" column="9" lean-forward="true" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#10919#10920#0" expanded="true" />
@@ -271,12 +261,12 @@
       <workItem from="1580480144533" duration="9877000" />
       <workItem from="1580728082762" duration="3490000" />
       <workItem from="1580817896612" duration="11380000" />
-      <workItem from="1580893125128" duration="8133000" />
+      <workItem from="1580893125128" duration="8559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32880000" />
+    <option name="totallyTimeSpent" value="33306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -374,16 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/controler/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -411,26 +391,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/EndGame.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/MainScreenGameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="306">
+          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="195" column="5" lean-forward="true" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
+        <state relative-caret-position="357">
+          <caret line="193" column="9" lean-forward="true" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#10919#10920#0" expanded="true" />
             <element signature="e#10944#10945#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sf/Hierarchie/vue/EndGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="56" lean-forward="true" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
           </folding>
         </state>
       </provider>

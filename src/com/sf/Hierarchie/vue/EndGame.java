@@ -25,9 +25,9 @@ public class EndGame extends BasicGameState {
         background.draw(0, 0, container.getWidth(), container.getHeight());
         if(Game.score1 < Game.score2){
             graphics.setColor(Color.white);
-            graphics.drawString("LE JOUEUR 2 GAGNE AVEC " + (int)Game.score2 * 1000 + " POINTS", 380, 50);
+            graphics.drawString("LE JOUEUR 2 GAGNE AVEC " + (Game.score2 + 0.1) * 1000 + " POINTS", 380, 50);
         }else if(Game.score1 > Game.score2){
-            graphics.drawString("LE JOUEUR 1 GAGNE AVEC " + (int)Game.score1 * 1000 + " POINTS", 380, 50);
+            graphics.drawString("LE JOUEUR 1 GAGNE AVEC " + (Game.score1 + 0.1) * 1000 + " POINTS", 380, 50);
 
         }
     }

@@ -189,7 +189,7 @@ public class Game extends BasicGameState {
             System.out.println(score2);
         }
 
-        if (score1 <= 0 || score2 <= 0){
+        if (score1 <= 0.1 || score2 <= 0.1){
             game.enterState(EndGame.ID);
         }
 
