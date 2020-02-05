@@ -164,6 +164,7 @@ public class FOptions extends JFrame {
             }
         });
 
+
         instruction.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -178,11 +179,26 @@ public class FOptions extends JFrame {
                 dispose();
             }
         });
-
-
     }
+
 
     public static int getID() {
         return ID;
+    }
+
+    public void controllerButtonPressed(int controller, int button) {
+        System.out.println(controller);
+        System.out.println(button);
+
+        switch (button) {
+            case 1:
+                System.out.println("test");
+            break;
+            case 2: Fenetre fenetre = new Fenetre();
+                dispose();
+                break;
+            case 3: dispose();
+                break;
+        }
     }
 }
