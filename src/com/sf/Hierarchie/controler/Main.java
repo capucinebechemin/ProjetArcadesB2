@@ -1,4 +1,5 @@
 package com.sf.Hierarchie.controler;
+import com.sf.Hierarchie.vue.EndGame;
 import com.sf.Hierarchie.vue.Game;
 import com.sf.Hierarchie.vue.MainScreenGameState;
 import org.newdawn.slick.AppGameContainer;
@@ -13,7 +14,7 @@ public class Main extends StateBasedGame {
     }
 
     public static void main(String[] args) throws SlickException {
-        new AppGameContainer(new Main(), 960, 960, false).start();
+        new AppGameContainer(new Main(),960,960,false).start();
     }
 
     /**
@@ -25,5 +26,6 @@ public class Main extends StateBasedGame {
     public void initStatesList(GameContainer container) throws SlickException {
         addState(new MainScreenGameState());
         addState(new Game());
+        addState(new EndGame());
     }
 }

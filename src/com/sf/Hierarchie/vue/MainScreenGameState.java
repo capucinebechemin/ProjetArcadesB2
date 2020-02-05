@@ -7,7 +7,6 @@ import org.newdawn.slick.state.StateBasedGame;
 public class MainScreenGameState extends BasicGameState {
 
     public static final int ID = 1;
-    int idMenu = 2;
     private Image background;
     private StateBasedGame game;
     private FOptions fenetre;
@@ -23,6 +22,7 @@ public class MainScreenGameState extends BasicGameState {
      * Contenons nous d'afficher l'image de fond.
      * Le text est placé approximativement au centre.
      */
+
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
         background.draw(0, 0, container.getWidth(), container.getHeight());
@@ -53,9 +53,6 @@ public class MainScreenGameState extends BasicGameState {
                 break;
 
         }
-
-
-        System.out.println(idMenu);
     }
 
     /**
