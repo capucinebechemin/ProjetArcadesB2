@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="1">
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="1">
  <tileset firstgid="1" source="Dungeon_Tileset.tsx"/>
  <tileset firstgid="321" source="tuile-logic.tsx"/>
  <layer id="1" name="Calque 1" width="30" height="30">
@@ -14,7 +14,12 @@
  </layer>
  <layer id="3" name="logic" width="30" height="30" visible="0">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAECu1U0QqAMAhcn7an6rX+/1+aDwdOEMtIWWwwzKWedyvrUkqde2rwo29gb1yi1sZ0GwGX/+sejbx8s3AtjuhLi7P4Ih9WqyPPrfivcGUf0o/EhQZkLVzZ5xs/C5f3zPkejf8atM/B5hXX7O4z7pfiuc6e+YxaZK2FWIobFdfiqL3X+EITWC3fez5xvcr1edb9aDr3VZ57WbhWp5xv1nyGNpH2An5i/T0QDgAA
+   H4sIAAAAAAAECu1U0QrAIAhsn9bTttft//9l+XBggsgcKY2CEJt63tWsWyl17aXBj97A2bhErYPpNgMu/9c9Gnn5ZuFaHNGXFmfxRT6sVkeeW/GjcGUf0o/EhQZkLVzZ5xc/C5f3zPlejf8etO+kecU1Hz0ngUV6c509uKhF1lqIpbhZcS2O2neNLzSB1fK95wvXq1yfZ92PpnNf5b2XhWt1yvlmzWdoE2kfgzf9gxAOAAA=
+  </data>
+ </layer>
+ <layer id="4" name="noLineBetween" width="30" height="30">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2T4QqAIAyE7dH61fu/UUl8MUbNrXRBJNi57bybofNUyvzP/x986A6U5MH7SbY97mzEl14r3h1oRPazJ9u31SN9WTyLQw20dGTNw7c41ECp/XRtaVIDn3ihUbEO4j0a98Un21efiD50fnT8dV99Ph1H/i97K7YGXHg6Ju9B9mb7enq74tCzrJMDZa3X+kybHNjLS+qcaZMDJb/XeoS2R9PDiZ7Ro+nhRH09fHyX7e1nTnzfwBXdSUBAEA4AAA==
   </data>
  </layer>
 </map>
