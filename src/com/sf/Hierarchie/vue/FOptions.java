@@ -10,7 +10,6 @@ import java.util.ArrayList;
 
 public class FOptions extends JFrame {
 
-
     public static final int ID = 2;
     public FOptions() {
         initFenetre();
@@ -24,76 +23,60 @@ public class FOptions extends JFrame {
 
         // creation du panel
         JPanel monPanel = new JPanel();
-        monPanel.setForeground(new Color(255, 255, 255));
+        monPanel.setForeground(new Color(0, 0, 0));
         monPanel.setFont(new Font("Tahoma", Font.BOLD, 15));
-        monPanel.setBackground(new Color(32, 85, 109));
+        monPanel.setBackground(new Color(197, 201, 212));
         setContentPane(monPanel);
         // definition du layout
         setLayout(null);
 
+        JLabel titre = new JLabel("OPTIONS");
+        titre.setForeground(new Color(0, 0, 0));
+        titre.setBounds(20, 100, 200, 50);
+        titre.setFont(new Font("Tahoma", Font.BOLD, 30));
+        monPanel.add(titre);
+
         JLabel monLabel = new JLabel();
         monLabel.setText("Vitesse Personnage :");
         // positionner le label
-        monLabel.setBounds(20, 20, 200, 20);
+        monLabel.setBounds(100, 200, 200, 20);
         monPanel.add(monLabel);
 
         JTextField monTexte = new JTextField();
-        monTexte.setBounds(20, 50, 100, 20);
+        monTexte.setBounds(100, 250, 100, 40);
         monPanel.add(monTexte);
 
 
         JLabel monLabel2 = new JLabel();
-        monLabel2.setText("Points vie personnage :");
+        monLabel2.setText("Points de vie :");
         // positionner le label
-        monLabel2.setBounds(20, 70, 200, 20);
+        monLabel2.setBounds(100, 300, 200, 20);
         monPanel.add(monLabel2);
 
         JTextField monTexte2 = new JTextField();
-        monTexte2.setBounds(20, 100, 100, 20);
+        monTexte2.setBounds(100, 350, 100, 40);
         monPanel.add(monTexte2);
-
-
-        JLabel monLabel3 = new JLabel();
-        monLabel3.setText("Delai Projectile :");
-        // positionner le label
-        monLabel3.setBounds(20, 120, 200, 20);
-        monPanel.add(monLabel3);
-
-        JTextField monTexte3 = new JTextField();
-        monTexte3.setBounds(20, 150, 100, 20);
-        monPanel.add(monTexte3);
 
 
         JLabel monLabel4 = new JLabel();
         monLabel4.setText("Puissance Projectile :");
         // positionner le label
-        monLabel4.setBounds(20, 170, 200, 20);
+        monLabel4.setBounds(100, 500, 200, 20);
         monPanel.add(monLabel4);
 
-        JTextField monTexte4 = new JTextField();
-        monTexte4.setBounds(20, 200, 100, 20);
+        JTextField monTexte4= new JTextField();
+        monTexte4.setBounds(100, 550, 100, 40);
         monPanel.add(monTexte4);
-
-
-        JLabel monLabel5 = new JLabel();
-        monLabel5.setText("Vitesse Rotation :");
-        // positionner le label
-        monLabel5.setBounds(20, 220, 200, 20);
-        monPanel.add(monLabel5);
-
-        JTextField monTexte5 = new JTextField();
-        monTexte5.setBounds(20, 250, 100, 20);
-        monPanel.add(monTexte5);
 
 
         JLabel monLabel6 = new JLabel();
         monLabel6.setText("Vitesse Projectile :");
         // positionner le label
-        monLabel6.setBounds(20, 270, 200, 20);
+        monLabel6.setBounds(100, 400, 200, 20);
         monPanel.add(monLabel6);
 
         JTextField monTexte6 = new JTextField();
-        monTexte6.setBounds(20, 300, 100, 20);
+        monTexte6.setBounds(100, 450, 100, 40);
         monPanel.add(monTexte6);
 
         ArrayList<Personnage> liste = LienBDD.selectAll();
@@ -103,29 +86,29 @@ public class FOptions extends JFrame {
         }
 
         JList liste_perso = new JList(liste_personnages);
-        liste_perso.setBounds(150, 10, 150, 240);
+        liste_perso.setBounds(500, 250, 150, 200);
         monPanel.add(liste_perso);
 
-
-        JButton valider = new JButton("Modifier");
-        valider.setForeground(new Color(255, 255, 255));
-        valider.setFont(new Font("Tahoma", Font.BOLD, 15));
-        valider.setBackground(new Color(9, 31, 49));
-        valider.setBounds(150, 350, 100, 60);
-        monPanel.add(valider);
 
         JButton retour = new JButton("Retour");
         retour.setForeground(new Color(255, 255, 255));
         retour.setFont(new Font("Tahoma", Font.BOLD, 15));
-        retour.setBackground(new Color(9, 31, 49));
-        retour.setBounds(25, 350, 100, 60);
+        retour.setBackground(new Color(5, 21, 46));
+        retour.setBounds(100, 700, 150, 50);
         monPanel.add(retour);
+
+        JButton valider = new JButton("Modifier");
+        valider.setForeground(new Color(255, 255, 255));
+        valider.setFont(new Font("Tahoma", Font.BOLD, 15));
+        valider.setBackground(new Color(5, 21, 46));
+        valider.setBounds(300, 700, 150, 50);
+        monPanel.add(valider);
 
         JButton instruction = new JButton("Instructions");
         instruction.setForeground(new Color(255, 255, 255));
         instruction.setFont(new Font("Tahoma", Font.BOLD, 15));
-        instruction.setBackground(new Color(9, 31, 49));
-        instruction.setBounds(275, 350, 200, 60);
+        instruction.setBackground(new Color(5, 21, 46));
+        instruction.setBounds(500, 700, 150, 50);
         monPanel.add(instruction);
 
         setVisible(true);
@@ -139,12 +122,12 @@ public class FOptions extends JFrame {
                 p.setVitesse_personnage(vp);
                 int pv = Integer.parseInt(monTexte2.getText());
                 p.setPoints_vie(pv);
-                int dt = Integer.parseInt(monTexte3.getText());
-                p.setDelai_tir(dt);
+//                int dt = Integer.parseInt(monTexte3.getText());
+//                p.setDelai_tir(dt);
                 int pp = Integer.parseInt(monTexte4.getText());
                 p.setPuissance_tir(pp);
-                int vr = Integer.parseInt(monTexte5.getText());
-                p.setVitesse_rotaion(vr);
+//                int vr = Integer.parseInt(monTexte5.getText());
+//                p.setVitesse_rotaion(vr);
                 int vip = Integer.parseInt(monTexte6.getText());
                 p.setVitesse_projectil(vip);
 
@@ -157,9 +140,9 @@ public class FOptions extends JFrame {
 
                 monTexte.setText("");
                 monTexte2.setText("");
-                monTexte3.setText("");
+//                monTexte3.setText("");
                 monTexte4.setText("");
-                monTexte5.setText("");
+//                monTexte5.setText("");
                 monTexte6.setText("");
             }
         });
@@ -193,7 +176,7 @@ public class FOptions extends JFrame {
         switch (button) {
             case 1:
                 System.out.println("test");
-            break;
+                break;
             case 2: Fenetre fenetre = new Fenetre();
                 dispose();
                 break;
