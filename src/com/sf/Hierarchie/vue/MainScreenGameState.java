@@ -1,5 +1,6 @@
 package com.sf.Hierarchie.vue;
 
+import com.sf.Hierarchie.model.LienBDD;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
@@ -10,7 +11,7 @@ public class MainScreenGameState extends BasicGameState {
     int idMenu = 2;
     private Image background;
     private StateBasedGame game;
-    private FScore scores;
+
     private FOptions fenetre;
     private Fenetre instruction;
 
@@ -31,6 +32,7 @@ public class MainScreenGameState extends BasicGameState {
         g.drawString("APPUYER SUR LE BOUTON 1 POUR COMMENCER", 330, 200);
         g.drawString("APPUYER SUR LE BOUTON 2 POUR VOIR LES OPTIONS", 310, 300);
         g.drawString("APPUYER SUR LE BOUTON 3 POUR VOIR LES INSTRUCTIONS", 310, 400);
+
 
     }
 
@@ -87,6 +89,7 @@ public class MainScreenGameState extends BasicGameState {
 
         }
     }
+
 
     /**
      * L'identifiant permet d'identifier les différentes boucles.
