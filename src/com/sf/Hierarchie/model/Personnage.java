@@ -1,5 +1,5 @@
 package com.sf.Hierarchie.model;
-
+//Elements liés aux personnages
 public class Personnage {
     private String nom;
     private int vitesse_personnage;
@@ -10,9 +10,8 @@ public class Personnage {
     private int vitesse_projectil;
     private int id;
 
-    public Personnage() {
-    }
-
+    public Personnage() { }
+    //Constructor pour la modification des caractéristiques du personnage dans FOption
     public Personnage(String nom, int points_vie, int puissance_tir, int id) {
         this.nom = nom;
         this.vitesse_personnage = vitesse_personnage;
@@ -21,6 +20,13 @@ public class Personnage {
         this.puissance_tir = puissance_tir;
         this.id = id;
     }
+
+    public Personnage(int vitesse_personnage, int id) {
+        this.vitesse_personnage = vitesse_personnage;
+        this.id = id;
+    }
+
+
 
     public String getNom() {
         return nom;

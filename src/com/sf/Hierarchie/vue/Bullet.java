@@ -26,6 +26,7 @@ public class Bullet {
         isShot = shot;
     }
 
+    //initialisation d'un missile
     Bullet() throws SlickException {
         missile = new Image("sprites/bullet.png");
         xPos = 0;
@@ -33,6 +34,7 @@ public class Bullet {
         missileHB = new Ellipse((int)xPos, (int)yPos, 7, 15);
     }
 
+    //copy du missile
     Bullet(Bullet copy) {
         xPos = copy.getX();
         yPos = copy.getY();
