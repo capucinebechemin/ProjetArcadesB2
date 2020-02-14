@@ -12,17 +12,25 @@ public class Fenetre extends JFrame {
     }
     private void initFenetre() {
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        // positionement + taille
-        setBounds(250, 50, 900, 900);
+        /**
+         * positionement + taille
+         */
+        setBounds(280, 40, 900, 900);
         setTitle("Ecran d'instruction");
 
-        // creation du panel
+        /**
+         * creation du panel
+         */
         JPanel monPanel = new JPanel();
         setContentPane(monPanel);
-        // definition du layout
+        /**
+         * definition du layout
+         */
         setLayout(null);
         monPanel.setBackground(new Color(197, 201, 212));
-
+        /**
+         *Ajout des labels
+         */
         JLabel titre = new JLabel("INSTRUCTIONS");
         titre.setForeground(new Color(0, 0, 0));
         titre.setBounds(20, 100, 700, 50);
@@ -35,7 +43,9 @@ public class Fenetre extends JFrame {
         regles.setBounds(50, 200, 760, 300);
         regles.setFont(new Font("Tahoma", Font.BOLD, 15));
         monPanel.add(regles);
-
+        /**
+         *Boutons pour changer de page
+         */
         JButton retour = new JButton("Retour");
         retour.setForeground(new Color(255, 255, 255));
         retour.setFont(new Font("Tahoma", Font.BOLD, 15));
@@ -51,6 +61,9 @@ public class Fenetre extends JFrame {
         monPanel.add(option);
 
         setVisible(true);
+        /**
+         * Fermeture de cet écran et ouvertue de l'écran d'instruction
+         */
 
         option.addActionListener(new ActionListener() {
             @Override
@@ -59,7 +72,9 @@ public class Fenetre extends JFrame {
                 dispose();
             }
         });
-
+        /**
+         *Fermeture de l'écran et retour au menu
+         */
         retour.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -1,19 +1,17 @@
 package com.sf.Hierarchie.vue;
 
+import com.sf.Hierarchie.model.LienBDD;
 import org.newdawn.slick.*;
 import org.newdawn.slick.geom.Ellipse;
 import org.newdawn.slick.geom.Shape;
-import org.newdawn.slick.geom.Vector2f;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.tiled.TiledMap;
+
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
-
-import static java.lang.Thread.currentThread;
-import static java.lang.Thread.sleep;
-
 
 public class Game extends BasicGameState {
 
@@ -29,30 +27,32 @@ public class Game extends BasicGameState {
     protected Shape shapeBulletJ2;
 
     public static final int ID = 2;
-    private float x2 = 880, y2 = 860;
-    private int direction2 = 2;
-    private boolean moving2 = false;
+    public static float x2 = 880, y2 = 860;
+    public static int direction2 = 2;
+    public static boolean moving2 = false;
     private Animation[] animations2 = new Animation[16];
 
-    private float x = 80, y = 220;
-    private int direction = 2;
-    private boolean moving = false;
+    public static float x = 80, y = 220;
+    public static int direction = 2;
+    public static boolean moving = false;
     private Animation[] animations = new Animation[16];
 
     private TiledMap map;
 
-    public static double score1 = 0.9;
     private Hud hud = new Hud();
-    public static double score2 = 0.9;
     private Hud hud2 = new Hud();
+
+    protected static float gameTime;
 
     public Game() throws SlickException {
     }
 
     @Override
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
+        // Initialisation de la map
         map = new TiledMap("map/map.xml");
 
+        // Mise en place des differentes positions des deux joueurs via un spriteSheet
         SpriteSheet spriteSheet = new SpriteSheet("sprites/fbi.png", 64, 64);
 
         Animation animation = new Animation();
@@ -79,12 +79,15 @@ public class Game extends BasicGameState {
         this.animations2[6] = loadAnimation(spriteSheet2, 1, 9, 2);
         this.animations2[7] = loadAnimation(spriteSheet2, 1, 9, 3);
 
+        // Initialisation des barres de vie
         this.hud.init(1);
         this.hud2.init(2);
 
+        // mise en place des tableaux de missiles
         LesBulletsJ1 = new  ArrayList<Bullet>();
         LesBulletsJ2 = new  ArrayList<Bullet>();
 
+        // initialisation des zones de collisions lié aux deux joueurs en fonction de leur position x et y
         shapeJ1 = new Ellipse((int)x, (int)y, 16, 16);
         shapeJ2 = new Ellipse((int)x2, (int)y2, 16, 16);
 
@@ -101,20 +104,23 @@ public class Game extends BasicGameState {
         graphics.drawAnimation(animations[direction + (moving ? 4 : 0)], x-32, y-60);
         graphics.drawAnimation(animations2[direction2 + (moving2 ? 4 : 0)], x2-32, y2-60);
 
-        this.hud.render(graphics,1,(float) score1);
-        this.hud2.render(graphics,2, (float) score2);
+        // actualisation des points de vie
+        this.hud.render(graphics,1,(float) MainScreen.score1);
+        this.hud2.render(graphics,2, (float) MainScreen.score2);
 
-            for (Bullet bulletJ1 : LesBulletsJ1) {
-                graphics.drawImage(this.bulletJ1.getImage(),this.bulletJ1.getX(), this.bulletJ1.getY());
-            }
-            for (Bullet bulletJ2 : LesBulletsJ2) {
-                graphics.drawImage(this.bulletJ2.getImage(), this.bulletJ2.getX(), this.bulletJ2.getY());
-            }
+        // Déplacement des missiles
+        for (Bullet bulletJ1 : LesBulletsJ1) {
+            graphics.drawImage(this.bulletJ1.getImage(),this.bulletJ1.getX(), this.bulletJ1.getY());
+        }
+        for (Bullet bulletJ2 : LesBulletsJ2) {
+            graphics.drawImage(this.bulletJ2.getImage(), this.bulletJ2.getX(), this.bulletJ2.getY());
+        }
     }
 
     @Override
     public void update(GameContainer container, StateBasedGame game, int delta) throws SlickException  {
 
+        // gestion des collisions avec la map et attribution des nouvelles coordonées
         if (this.moving) {
             float futurX = getFuturX(delta);
             float futurY = getFuturY(delta);
@@ -146,8 +152,9 @@ public class Game extends BasicGameState {
         shapeJ1.setLocation(x, y);
         shapeJ2.setLocation(x2, y2);
 
+        // gestion des colisions joueurs missiles
         for (Bullet bulletJ1 : LesBulletsJ1){
-            this.bulletJ1.setY(this.bulletJ1.getY() + 1);
+            this.bulletJ1.setY(this.bulletJ1.getY() + MainScreen.vitesseTirJ1);
         }
 
         for (Iterator<Bullet> bulletJ1Iterator = LesBulletsJ1.iterator(); bulletJ1Iterator.hasNext();) {
@@ -162,12 +169,12 @@ public class Game extends BasicGameState {
 
             if (shapeBulletJ1.intersects(shapeJ2)) {
                 bulletJ1Iterator.remove();
-                score1 -= 0.1;
+                MainScreen.score1 -= MainScreen.puissanceJ2;
             }
         }
 
         for (Bullet bulletJ2 : LesBulletsJ2){
-            this.bulletJ2.setY(this.bulletJ2.getY() - 1);
+            this.bulletJ2.setY(this.bulletJ2.getY() - MainScreen.vitesseTirJ2);
         }
 
         for (Iterator<Bullet> bulletJ2Iterator = LesBulletsJ2.iterator(); bulletJ2Iterator.hasNext();) {
@@ -180,21 +187,23 @@ public class Game extends BasicGameState {
                 bulletJ2Iterator.remove();
             }
 
-
             if (shapeBulletJ2.intersects(shapeJ1)) {
                 bulletJ2Iterator.remove();
-                score2 -= 0.1;
+                MainScreen.score2 -= MainScreen.puissanceJ1;
             }
-
-            System.out.println(score2);
         }
 
-        if (score1 <= 0.1 || score2 <= 0.1){
+
+        // si un des joueurs n'a plus de vie on passe a l'écran de fin de jeu
+        if (MainScreen.score1 <= 0.1 || MainScreen.score2 <= 0.1){
             game.enterState(EndGame.ID);
+            MainScreen.chrono.stop();
+            gameTime = MainScreen.chrono.getDureeSec();
         }
 
     }
 
+    // fonction appelée qui compare les cases de la tiled map entre la couche map et les couches de colision
     private boolean isCollision(float x, float y, String layer) {
         int tileW = this.map.getTileWidth();
         int tileH = this.map.getTileHeight();
@@ -204,18 +213,20 @@ public class Game extends BasicGameState {
 
         boolean collision = (tile != null);
         if (collision) {
-            Color color = tile.getColor((int) x % tileW, (int) y % tileH);
+            Color color = tile.getColor((int) this.x % tileW, (int) this.y % tileH);
             collision = color.getAlpha() > 0;
         }
         return collision;
     }
 
+    //renvoi la position suivante des personnages
     private float getFuturX(int delta) {
         float futurX = this.x;
         switch (this.direction) {
-            case 1: futurX = this.x - .2f * delta;
+            case 1:
+                futurX = this.x - MainScreen.vitesseJ1 * delta;
                 break;
-            case 3: futurX = this.x + .2f * delta;
+            case 3: futurX = this.x + MainScreen.vitesseJ1 * delta;
                 break;
         }
         return futurX;
@@ -224,9 +235,9 @@ public class Game extends BasicGameState {
     private float getFuturY(int delta) {
         float futurY = this.y;
         switch (this.direction) {
-            case 0: futurY = this.y - .2f * delta;
+            case 0: futurY = this.y - MainScreen.vitesseJ1 * delta;
                 break;
-            case 2: futurY = this.y + .2f * delta;
+            case 2: futurY = this.y + MainScreen.vitesseJ1 * delta;
                 break;
         }
         return futurY;
@@ -235,9 +246,9 @@ public class Game extends BasicGameState {
     private float getFuturX2(int delta) {
         float futurX2 = this.x2;
         switch (this.direction2) {
-            case 1: futurX2 = this.x2 - .2f * delta;
+            case 1: futurX2 = this.x2 - MainScreen.vitesseJ2 * delta;
                 break;
-            case 3: futurX2 = this.x2 + .2f * delta;
+            case 3: futurX2 = this.x2 + MainScreen.vitesseJ2 * delta;
                 break;
         }
         return futurX2;
@@ -246,27 +257,27 @@ public class Game extends BasicGameState {
     private float getFuturY2(int delta) {
         float futurY2 = this.y2;
         switch (this.direction2) {
-            case 0: futurY2 = this.y2 - .2f * delta;
+            case 0: futurY2 = this.y2 - MainScreen.vitesseJ2 * delta;
                 break;
-            case 2: futurY2 = this.y2 + .2f * delta;
+            case 2: futurY2 = this.y2 + MainScreen.vitesseJ2 * delta;
                 break;
         }
         return futurY2;
     }
 
+    // Envoie de missiles
     public void ShootEnemy1() throws SlickException{
-        System.out.println("test");
         LesBulletsJ2.add(bulletJ2);
         shapeBulletJ2 = new Ellipse((int)bulletJ2.getX(), (int)bulletJ2.getY(), 5, 5);
         this.bulletJ2.setShot(true);
     }
 
     public void ShootEnemy2() throws SlickException{
-        System.out.println("test J2");
         LesBulletsJ1.add(bulletJ1);
         shapeBulletJ1 = new Ellipse((int)bulletJ1.getX(), (int)bulletJ1.getY(), 5, 5);
         this.bulletJ1.setShot(true);
     }
+
 
     private Animation loadAnimation(SpriteSheet spriteSheet, int startX, int endX, int y) {
         Animation animation = new Animation();
@@ -276,81 +287,237 @@ public class Game extends BasicGameState {
         return animation;
     }
 
+
+    //Navigation au clavier
     @Override
     public void keyPressed(int key, char c) {
         System.out.println(key);
-            switch (key) {
-                case Input.KEY_UP:
-                    this.direction = 0;
-                    this.moving = true;
-                    break;
-                case Input.KEY_LEFT:
-                    this.direction = 1;
-                    this.moving = true;
-                    break;
-                case Input.KEY_DOWN:
-                    this.direction = 2;
-                    this.moving = true;
-                    break;
-                case Input.KEY_RIGHT:
-                    this.direction = 3;
-                    this.moving = true;
-                    break;
-                case Input.KEY_Z:
-                    this.direction2 = 0;
-                    this.moving2 = true;
-                    break;
-                case Input.KEY_Q:
-                    this.direction2 = 1;
-                    this.moving2 = true;
-                    break;
-                case Input.KEY_S:
-                    this.direction2 = 2;
-                    this.moving2 = true;
-                    break;
-                case Input.KEY_D:
-                    this.direction2 = 3;
-                    this.moving2 = true;
-                    break;
+        switch (key) {
+            case Input.KEY_UP:
+                this.direction = 0;
+                this.moving = true;
+                break;
+            case Input.KEY_LEFT:
+                this.direction = 1;
+                this.moving = true;
+                break;
+            case Input.KEY_DOWN:
+                this.direction = 2;
+                this.moving = true;
+                break;
+            case Input.KEY_RIGHT:
+                this.direction = 3;
+                this.moving = true;
+                break;
+            case Input.KEY_Z:
+                this.direction2 = 0;
+                this.moving2 = true;
+                break;
+            case Input.KEY_Q:
+                this.direction2 = 1;
+                this.moving2 = true;
+                break;
+            case Input.KEY_S:
+                this.direction2 = 2;
+                this.moving2 = true;
+                break;
+            case Input.KEY_D:
+                this.direction2 = 3;
+                this.moving2 = true;
+                break;
 
-                case Input.KEY_R:
-                    try {
-                        this.ShootEnemy1();
-                    } catch (SlickException e) {
-                        e.printStackTrace();
-                    }
-                    break;
+            case Input.KEY_R:
+                try {
+                    this.ShootEnemy1();
+                } catch (SlickException e) {
+                    e.printStackTrace();
+                }
+                break;
 
-                case Input.KEY_M:
-                    try {
+            case Input.KEY_M:
+                try {
+                    this.ShootEnemy2();
+                } catch (SlickException e) {
+                    e.printStackTrace();
+                }
+                break;
+        }
+    }
+
+    //navigation aux joysticks et bouttons
+    @Override
+    public void controllerButtonPressed(int controller, int button) {
+        System.out.println(controller);
+        System.out.println(button);
+        switch (controller){
+            case 0 : {
+                switch (button) {
+                    case 1: try {
                         this.ShootEnemy2();
                     } catch (SlickException e) {
                         e.printStackTrace();
                     }
-                    break;
+                        break;
+                }
+                break;
             }
+            case 1 :
+                switch (button) {
+                    case 4: try {
+                        this.ShootEnemy1();
+                    } catch (SlickException e) {
+                        e.printStackTrace();
+                    }
+                        break;
+                }
+                break;
+        }
+    }
+
+    @Override
+    public void controllerLeftPressed(int controller) {
+        switch (controller) {
+            case 0:
+                this.direction = 1;
+                this.moving = true;
+                break;
+
+            case 1:
+                this.direction2 = 1;
+                this.moving2 = true;
+
+                break;
+        }
+
+    }
+
+    @Override
+    public void controllerLeftReleased(int controller) {
+        switch (controller) {
+            case 0:
+                this.moving = false;
+
+                break;
+
+            case 1:
+                this.moving2 = false;
+                break;
+        }
+    }
+
+    @Override
+    public void controllerRightPressed(int controller) {
+        switch (controller) {
+            case 0:
+                this.direction = 3;
+                this.moving = true;
+
+                break;
+
+            case 1:
+                this.direction2 = 3;
+                this.moving2 = true;
+
+                break;
+        }
+
+    }
+
+    @Override
+    public void controllerRightReleased(int controller) {
+        switch (controller) {
+            case 0:
+                this.moving = false;
+                break;
+
+            case 1:
+                this.moving2 = false;
+                break;
+        }
+    }
+
+    @Override
+    public void controllerUpPressed(int controller) {
+        switch (controller) {
+            case 0:
+                this.direction = 0;
+                this.moving = true;
+
+                break;
+
+            case 1:
+                this.direction2 = 0;
+                this.moving2 = true;
+
+                break;
+        }
+
+    }
+
+    @Override
+    public void controllerUpReleased(int controller) {
+        switch (controller) {
+            case 0:
+                this.moving = false;
+                break;
+
+            case 1:
+                this.moving2 = false;
+                break;
+        }
+    }
+
+    @Override
+    public void controllerDownPressed(int controller) {
+        switch (controller) {
+            case 0:
+                this.direction = 2;
+                this.moving = true;
+
+                break;
+
+            case 1:
+                this.direction2 = 2;
+                this.moving2 = true;
+
+                break;
+        }
+
+    }
+
+    @Override
+    public void controllerDownReleased(int controller) {
+        switch (controller) {
+            case 0:
+                this.moving = false;
+                break;
+
+            case 1:
+                this.moving2 = false;
+                break;
+        }
     }
 
     @Override
     public void keyReleased(int key, char c) {
-            switch (key) {
-                case Input.KEY_UP:    this.direction = 0; this.moving = false;
-                    break;
-                case Input.KEY_LEFT:  this.direction = 1; this.moving = false;
-                    break;
-                case Input.KEY_DOWN:  this.direction = 2; this.moving = false;
-                    break;
-                case Input.KEY_RIGHT: this.direction = 3; this.moving = false;
-                    break;
-                case Input.KEY_Z:    this.direction2 = 0; this.moving2 = false;
-                    break;
-                case Input.KEY_Q:  this.direction2 = 1; this.moving2 = false;
-                    break;
-                case Input.KEY_S:  this.direction2 = 2; this.moving2 = false;
-                    break;
-                case Input.KEY_D: this.direction2 = 3; this.moving2 = false;
-                    break;
-            }
+        switch (key) {
+            case Input.KEY_UP:    this.direction = 0; this.moving = false;
+                break;
+            case Input.KEY_LEFT:  this.direction = 1; this.moving = false;
+                break;
+            case Input.KEY_DOWN:  this.direction = 2; this.moving = false;
+                break;
+            case Input.KEY_RIGHT: this.direction = 3; this.moving = false;
+                break;
+            case Input.KEY_Z:    this.direction2 = 0; this.moving2 = false;
+                break;
+            case Input.KEY_Q:  this.direction2 = 1; this.moving2 = false;
+                break;
+            case Input.KEY_S:  this.direction2 = 2; this.moving2 = false;
+                break;
+            case Input.KEY_D: this.direction2 = 3; this.moving2 = false;
+                break;
+        }
     }
 
     @Override
